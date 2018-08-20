@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 Classes - getters and setters</title>
+
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var attendance = {
+                _list: [],
+                set addName(name) {
+                    this._list.push(name);
+                },
+                get list() {
+                    return this._list.join(', ');
+                }
+            };
+            attendance.addName = 'Joanna';
+            attendance.addName = 'Michal';
+            console.log(attendance.list);
+            console.log(attendance._list);
+
+            console.log("++++++++++++++++++++++++++++++++++++++++");
+
+            class Hike {
+                constructor(distance, pace) {
+                    this.distance = distance;
+                    this.pace = pace;
+                }
+
+                get lengthInHours() {
+                    return `${this.calcLength()} hours`;
+                }
+
+                calcLength() {
+                    return this.distance / this.pace;
+                }
+            }
+            var hikeTest= new Hike(100, 3);
+            console.log( hikeTest.lengthInHours);
+
+        }
+    </script>
+
+</head>
+
+</html>

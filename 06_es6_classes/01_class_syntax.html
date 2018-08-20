@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 Classes - syntax</title>
+
+    <script type="text/javascript">
+        window.onload = function () {
+
+            class Vehicle {
+                constructor(description, wheels) {
+                    this.description = description;
+                    this.wheels = wheels;
+                }
+                describeYouself() {
+                    console.log(`I am a ${this.description} with ${this.wheels} wheels`);
+                }
+            }
+
+            var van = new Vehicle("old scrap", 4);
+            van.describeYouself();
+
+        }
+    </script>
+
+</head>
+
+</html>
