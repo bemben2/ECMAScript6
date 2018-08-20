@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 function and objects - destructuring assigment</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var cities = ["Spokane", "boston", "LA", "Seattle", "Portland"];
+            var [first, , , fourth] = ["Spokane", "boston", "LA", "Seattle", "Portland"];
+            console.log(first);
+            console.log(fourth);
+
+            var sndwich = {
+                title: "Reuben",
+                price: 7,
+                description: "Cleveland's favourite",
+                ingirdients: ['bred', "corn", "ham", "cheese"]
+            };
+
+            console.log(sndwich.title);
+            console.log(sndwich.price);
+
+            var {
+                title,
+                price
+            } = {
+                title: "Reuben",
+                price: 7,
+                description: "Cleveland's favourite",
+                ingirdients: ['bred', "corn", "ham", "cheese"]
+            };
+
+            console.log(title);
+            console.log(price);
+
+            var vacation = {
+                dectination: "Chile",
+                travelers: 2,
+                activity: "skiing"
+            };
+
+            function vacationMarketing({
+                dectination,
+                activity
+            }) {
+                return `Come to ${dectination} and do ${activity}`
+            }
+
+            console.log(vacationMarketing(vacation));
+
+        }
+    </script>
+
+</head>
+
+</html>

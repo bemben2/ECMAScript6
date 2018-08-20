@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 function and objects - arrow functions and this</title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var person = {
+                first: "Doug",
+                actions: ['bike', 'hike', 'ski'],
+                printActions: function () {
+                    var _this = this;
+                    this.actions.forEach(function (action) {
+                        var str = _this.first + " like to  " + action;
+                        console.log(str);
+                    });
+                }
+            };
+
+            person.printActions();
+
+            var person2 = {
+                first: "Douglas",
+                actions: ['bike', 'hike', 'ski'],
+                printActions: function () {
+
+                    this.actions.forEach(function (action) {
+                        var str = this.first + " like to  " + action;
+                        console.log(str);
+                    }.bind(this));
+                }
+            };
+
+            person2.printActions();
+
+            var person3 = {
+                first: "Douglas3",
+                actions: ['bike', 'hike', 'ski'],
+                printActions() {
+
+                    this.actions.forEach(action => {
+                        var str = this.first + " like to  " + action;
+                        console.log(str);
+                    });
+                }
+            };
+
+            person3.printActions();
+        }
+    </script>
+
+</head>
+
+</html>

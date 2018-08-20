@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 function and objects - symbols</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            
+            const id = Symbol();
+            const courseInfo = {
+                title: "ES6",
+                topics: ["babel", "syntacs", "functions", "clsasses"],
+                id: "js-course"
+            };
+
+            courseInfo[id] = 4123;
+            console.log(courseInfo);
+        }
+    </script>
+
+</head>
+
+</html>

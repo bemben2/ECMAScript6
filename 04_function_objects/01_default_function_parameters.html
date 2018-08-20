@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 function and objects - default function patrameters</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            function addToNumbers(x = 5, y = 7) {
+                console.log(x + y);
+            }
+            addToNumbers(); //NaN
+
+            function haveFunTime(activityName = 'hiking', time = 3) {
+                console.log(`Today I will go ${activityName} for ${time} hours`);
+            }
+            haveFunTime();
+            haveFunTime('cicling', 4);
+        }
+    </script>
+
+</head>
+
+</html>

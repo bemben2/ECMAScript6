@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 function and objects - iterators</title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var title = "ES6";
+            console.log(typeof title);
+            console.log(typeof title[Symbol.iterator]);
+
+            var iterateIt = title[Symbol.iterator]();
+            console.log(iterateIt.next());
+            console.log(iterateIt.next());
+            console.log(iterateIt.next());
+            console.log(iterateIt.next());
+
+            function tableReady(arr) {
+                var nextIndex = 0;
+                return {
+                    next() {
+                        if (nextIndex < arr.length) {
+                            return {
+                                value: arr.shift(),
+                                done: false
+                            }
+                        } else {
+                            return {
+                                done: true
+                            }
+                        }
+                    }
+                }
+            }
+
+            var waitingList= ['Sara', 'Heter', 'Adam'];
+            var iterateList = tableReady(waitingList);
+
+            console.log(`${iterateList.next().value}, table is ready`);
+            console.log(`${iterateList.next().value}, table is ready`);
+            console.log(`${iterateList.next().value}, table is ready`);
+            console.log(`${iterateList.next().done} `);
+        }
+    </script>
+
+</head>
+
+</html>
