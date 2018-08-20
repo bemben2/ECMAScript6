@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        section>div {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            float: left;
+            margin: 3px;
+            cursor: pointer;
+        }
+    </style>
+    <!-- No needed anymore working without it  -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script> -->
+    <script type="text/javascript">
+        // var nameBuilder = function (firstName = "John", lastName = "Doe") { console.log(firstName + " " + lastName); }; nameBuilder();
+        // var x = 10;
+        // if (x) {
+        //     let x = 4;
+        // }
+        // console.log(x);
+        
+        window.onload = function () {
+            for (let i = 0; i < 45; i++) {
+                var div = document.createElement('div');
+                div.onclick = function () {
+                    alert("you clicked on a box # " + i);
+                }
+                document.getElementsByTagName('section')[0].appendChild(div);
+            }
+        }
+    </script>
+    <title>ES6 syntax</title>
+
+</html>
+
+</head>
+
+<body>
+    <header>
+        <h1>Click on the box</h1>
+    </header>
+    <section></section>
+
+</body>
+
+</html>

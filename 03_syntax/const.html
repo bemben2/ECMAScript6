@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 syntax - const</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            function coldEnough(deg) {
+                const freezingTemo = 32;
+                if (freezingTemo <= deg) {
+                    return deg + " is above freezing."
+                } else {
+                    return deg + " is below freezing."
+                }
+            }
+            console.log(coldEnough(40));
+            console.log(coldEnough(12));
+            console.log(coldEnough(-10));
+
+            // const birhtYeat = 1985;
+            // var birhtYeat = 1979;
+            // var age = 2016 - 1985;
+            // console.log(age);
+        }
+    </script>
+
+</head>
+
+</html>

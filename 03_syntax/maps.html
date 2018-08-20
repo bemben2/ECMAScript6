@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 syntax - maps</title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var course = new Map();
+            course.set('react', {
+                description: 'ui'
+            });
+            course.set('jest', {
+                description: 'testing'
+            });
+
+            console.log(course);
+            console.log(course.react); //undefined
+            console.log(course.get('react'));
+
+            var details = new Map([
+                [new Date(), 'today'],
+                ['item', [1, 2]]
+            ]);
+
+            console.log(details);
+            console.log(details.size);
+
+            details.forEach(function (item) {
+                console.log(item);
+            });
+        };
+    </script>
+
+</head>
+
+<body></body>
+
+</html>

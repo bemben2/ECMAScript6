@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 syntax - sets</title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var books = new Set();
+            books.add('pride and Prejudice');
+            books.add('War and Pice')
+                .add('Oliver Twist');
+
+            console.log(books);
+            console.log("books.size", books.size);
+            console.log("has Oliver Twist", books.has('Oliver Twist'));
+            
+            books.delete('Oliver Twist');
+            console.log("has Oliver Twist still?", books.has('Oliver Twist'));
+            
+            var data = [4,2,4,4,2,4,1,5,6,8,7,];
+            var set = new Set(data);
+            console.log("data.length ", data.length);
+            console.log("set.length ", set.size); // only unique values are in
+
+        };
+    </script>
+
+</head>
+
+<body></body>
+
+</html>

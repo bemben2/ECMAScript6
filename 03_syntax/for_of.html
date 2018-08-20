@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 syntax - for .. of</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            for (let letter of 'javaScript') {
+                console.log(letter);
+            }
+
+            var topics = ['js', 'node', 'react'];
+            for (let topic of topics) {
+                console.log(topic);
+            }
+
+            var topics = new Map();
+            topics.set('HTML', '/clsaa/html');
+            topics.set('css', '/clsaa/css');
+            topics.set('JS', '/clsaa/JS');
+            topics.set('NODE', '/clsaa/css');
+
+            for (let topic of topics) {
+                console.log(topic);
+            }
+
+            for (let topic of topics.keys()) {
+                console.log(topic, " course name");
+            }
+
+            for (let topic of topics.values()) {
+                console.log("url:", topic, );
+            }
+
+            for (let course of topics.entries()) {
+                console.log(course );
+            }
+        };
+    </script>
+
+</head>
+
+<body></body>
+
+</html>

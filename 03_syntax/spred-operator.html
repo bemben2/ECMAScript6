@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 syntax - spread operator</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            
+            var cats = ["Taby","Siames", "Persian"];
+            var dogs = ["Golden ","pug", "Siersciuch"];
+            var animals = ["Whale ",cats, "girafe", "Sname",dogs, "coyote"];
+            var animals2 = ["Whale ",...cats, "girafe", "Sname",...dogs, "coyote"];
+            console.log(animals);
+            console.log(animals2);
+        };
+    </script>
+
+</head>
+
+<body></body>
+
+</html>

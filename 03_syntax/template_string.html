@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 syntax - template string</title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            // function print (firstName) {
+            //     console.log(`hello ${firstName}`);
+            // }
+
+            // print("misiek");
+
+            function createEmail(firstName, purchasePrice) {
+                var shipping = 5.95;
+                console.log(
+                    `Hi ${firstName}, Thx for buying from us!
+                                Total : $${purchasePrice}
+                                Shiping: $${shipping}
+                                Total : $${purchasePrice + shipping};
+                            `
+                );
+
+            }
+
+            createEmail("michu", 100);
+        }
+    </script>
+
+</head>
+
+<body></body>
+
+</html>
