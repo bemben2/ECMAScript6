@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ES6 function and objects - async and await</title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            const delay = seconds => {
+                return new Promise(
+                    resolve => setTimeout(resolve, seconds * 1000)
+                )
+            };
+
+            const countToFive = async() => {
+                console.log('zero secends');
+                await delay (1);
+                console.log('one secends');
+                await delay (1);
+                console.log('two secends');
+                await delay (3);
+                console.log('five secends');
+
+            };
+            countToFive();
+        }
+    </script>
+
+</head>
+
+</html>
